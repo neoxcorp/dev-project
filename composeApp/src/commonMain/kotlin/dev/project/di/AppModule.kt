@@ -1,8 +1,8 @@
 package dev.project.di
 
+import dev.project.news.di.newsModule
+import dev.project.splash.di.splashModule
 import org.koin.core.context.startKoin
-
-fun appModule() = listOf(commonModule)
 
 fun initKoin() {
     startKoin {
@@ -11,3 +11,10 @@ fun initKoin() {
         )
     }
 }
+
+private fun appModule() =
+    listOf(
+        commonModule,
+        splashModule,
+        newsModule,
+    )

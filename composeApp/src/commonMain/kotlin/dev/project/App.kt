@@ -11,6 +11,8 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import dev.project.di.initKoin
+import dev.project.news.NewsScreen
+import dev.project.splash.SplashScreen
 import devproject.composeapp.generated.resources.Res
 import devproject.composeapp.generated.resources.compose_multiplatform
 import org.jetbrains.compose.resources.painterResource
@@ -30,6 +32,8 @@ fun App() {
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
+            SplashScreen()
+            NewsScreen()
             AnimatedVisibility(showContent) {
                 val greet = remember { greeting.greeting() }
                 Column(
