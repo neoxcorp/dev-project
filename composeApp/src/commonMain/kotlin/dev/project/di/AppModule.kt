@@ -1,3 +1,13 @@
 package dev.project.di
 
-fun appModule() = listOf(commonModule, platformModule)
+import org.koin.core.context.startKoin
+
+fun appModule() = listOf(commonModule)
+
+fun initKoin() {
+    startKoin {
+        modules(
+            appModule(),
+        )
+    }
+}
