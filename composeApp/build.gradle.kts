@@ -55,6 +55,14 @@ kotlin {
             implementation(libs.mvi.kotlin.logging)
             implementation(libs.mvi.kotlin.timetravel)
             implementation(libs.mvi.kotlin.extensions.coroutines)
+
+            // navigation
+            implementation(libs.voyager.navigator)
+            implementation(libs.voyager.screenmodel)
+            implementation(libs.voyager.bottom.sheet.navigator)
+            implementation(libs.voyager.tab.navigator)
+            implementation(libs.voyager.transitions)
+            implementation(libs.voyager.koin)
         }
     }
 }
