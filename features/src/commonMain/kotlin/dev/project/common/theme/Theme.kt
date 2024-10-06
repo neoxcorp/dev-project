@@ -2,9 +2,9 @@ package dev.project.common.theme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.isSystemInDarkTheme
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
@@ -119,7 +119,7 @@ fun AppTheme(
         colorScheme = colorScheme,
         typography = AppTypography,
         content = {
-            Box(
+            Scaffold(
                 modifier =
                     Modifier
                         .fillMaxSize()
