@@ -8,7 +8,7 @@ internal class SplashBootstrapper : CoroutineBootstrapper<SplashAction>() {
     override fun invoke() {
         scope.launch {
             dispatch(SplashAction.Init)
-            delay(5000)
+            delay(500)
             dispatch(SplashAction.Initialized)
         }
     }

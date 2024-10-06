@@ -10,15 +10,8 @@ import dev.project.splash.mvi.SplashStore.SplashState
 internal class SplashExecutor : CoroutineExecutor<SplashIntent, SplashAction, SplashState, SplashMsg, SplashLabel>() {
     override fun executeIntent(intent: SplashIntent) =
         when (intent) {
-            is Loading -> {
-                println("SplashStore.SplashIntent executeIntent $intent")
-                dispatch(SplashMsg.Loading)
-            }
-
-            is Finish -> {
-                println("SplashStore.SplashIntent executeIntent $intent")
-                dispatch(SplashMsg.Finish)
-            }
+            is Loading -> dispatch(SplashMsg.Loading)
+            is Finish -> dispatch(SplashMsg.Finish)
         }
 
     override fun executeAction(action: SplashAction) {
