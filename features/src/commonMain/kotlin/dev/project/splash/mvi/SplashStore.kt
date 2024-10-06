@@ -13,6 +13,8 @@ internal interface SplashStore : Store<SplashIntent, SplashState, SplashLabel> {
     }
 
     sealed interface SplashLabel {
+        data object Idle : SplashLabel
+
         data object OpenNews : SplashLabel
     }
 
