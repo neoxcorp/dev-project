@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
-//    alias(libs.plugins.androidApplication)
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.jetbrainsCompose)
     alias(libs.plugins.compose.compiler)
@@ -94,5 +93,6 @@ android {
     }
     dependencies {
         debugImplementation(compose.uiTooling)
+        implementation(libs.accompanist.systemuicontroller)
     }
 }
