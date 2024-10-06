@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -33,8 +33,8 @@ class NewsScreen : Screen {
 fun NewsScreenComponents() {
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(Modifier.wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("News...", fontSize = 24.sp, color = MaterialTheme.colors.primary)
-            Text("News...", fontSize = 24.sp, color = MaterialTheme.colors.error)
+            Text("News...", fontSize = 24.sp, color = MaterialTheme.colorScheme.primary)
+            Text("News...", fontSize = 24.sp, color = MaterialTheme.colorScheme.error)
             Spacer(modifier = Modifier.height(100.dp))
             Image(
                 modifier = Modifier.size(50.dp),

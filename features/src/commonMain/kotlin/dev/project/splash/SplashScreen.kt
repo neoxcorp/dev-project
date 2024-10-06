@@ -8,8 +8,8 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.CircularProgressIndicator
-import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
@@ -65,9 +65,9 @@ internal fun SplashScreenComponents(store: SplashStore = koinInject<SplashStore>
 
     Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Column(Modifier.wrapContentSize(), horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("Splash!", fontSize = 24.sp, color = MaterialTheme.colors.primary)
+            Text("Splash!", fontSize = 24.sp, color = MaterialTheme.colorScheme.primary)
             Spacer(modifier = Modifier.height(50.dp))
-            CircularProgressIndicator(modifier = Modifier.size(50.dp), color = MaterialTheme.colors.primary)
+            CircularProgressIndicator(modifier = Modifier.size(50.dp), color = MaterialTheme.colorScheme.primary)
         }
     }
 }
