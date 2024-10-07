@@ -7,24 +7,30 @@ import dev.project.news.mvi.NewsStore.NewsState
 
 internal interface NewsStore : Store<NewsIntent, NewsState, NewsLabel> {
     sealed interface NewsIntent {
-        data object Loading : NewsIntent
+        data object LoadAgain : NewsIntent
 
-        data object Finish : NewsIntent
+        data class Log(
+            val log: String,
+        ) : NewsIntent
     }
 
     sealed interface NewsLabel {
-        data object Idle : NewsLabel
-
-        data object OpenNews : NewsLabel
+        data class PrintLog(
+            val log: String,
+        ) : NewsLabel
     }
 
     sealed interface NewsState {
         data object Idle : NewsState
 
-        data object Initialized : NewsState
-
         data object Loading : NewsState
 
-        data object Loaded : NewsState
+        data class Loaded(
+            val loadedData: String = "",
+        ) : NewsState
+
+        data class Error(
+            val error: String = "",
+        ) : NewsState
     }
 }
