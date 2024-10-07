@@ -28,10 +28,11 @@ kotlin {
     }
 
     sourceSets {
-
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -62,6 +63,12 @@ kotlin {
             implementation(libs.voyager.tab.navigator)
             implementation(libs.voyager.transitions)
             implementation(libs.voyager.koin)
+
+            implementation(libs.ktor.client.core)
+        }
+
+        iosMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
